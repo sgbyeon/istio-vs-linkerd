@@ -79,7 +79,12 @@ spec:
         securityContext:
           runAsUser: 1000
       nodeSelector:
-        kubernetes.io/hostname: ip-192-168-94-255.ap-northeast-2.compute.internal
+        kubernetes.io/hostname: ip-192-168-65-136.ap-northeast-2.compute.internal
+      tolerations:
+        - key: "bookinfo"
+          operator: "Equal"
+          value: "only"
+          effect: "NoSchedule"
 ---
 ##################################################################################################
 # Ratings service
@@ -134,7 +139,12 @@ spec:
         securityContext:
           runAsUser: 1000
       nodeSelector:
-        kubernetes.io/hostname: ip-192-168-94-255.ap-northeast-2.compute.internal
+        kubernetes.io/hostname: ip-192-168-65-136.ap-northeast-2.compute.internal
+      tolerations:
+        - key: "bookinfo"
+          operator: "Equal"
+          value: "only"
+          effect: "NoSchedule"
 ---
 ##################################################################################################
 # Reviews service
@@ -202,7 +212,12 @@ spec:
       - name: tmp
         emptyDir: {}
       nodeSelector:
-        kubernetes.io/hostname: ip-192-168-94-255.ap-northeast-2.compute.internal
+        kubernetes.io/hostname: ip-192-168-65-136.ap-northeast-2.compute.internal
+      tolerations:
+        - key: "bookinfo"
+          operator: "Equal"
+          value: "only"
+          effect: "NoSchedule"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -246,7 +261,12 @@ spec:
       - name: tmp
         emptyDir: {}
       nodeSelector:
-        kubernetes.io/hostname: ip-192-168-94-255.ap-northeast-2.compute.internal
+        kubernetes.io/hostname: ip-192-168-65-136.ap-northeast-2.compute.internal
+      tolerations:
+        - key: "bookinfo"
+          operator: "Equal"
+          value: "only"
+          effect: "NoSchedule"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -290,7 +310,12 @@ spec:
       - name: tmp
         emptyDir: {}
       nodeSelector:
-        kubernetes.io/hostname: ip-192-168-94-255.ap-northeast-2.compute.internal
+        kubernetes.io/hostname: ip-192-168-65-136.ap-northeast-2.compute.internal
+      tolerations:
+        - key: "bookinfo"
+          operator: "Equal"
+          value: "only"
+          effect: "NoSchedule"
 ---
 ##################################################################################################
 # Productpage services
@@ -351,5 +376,10 @@ spec:
       - name: tmp
         emptyDir: {}
       nodeSelector:
-        kubernetes.io/hostname: ip-192-168-94-255.ap-northeast-2.compute.internal
+        kubernetes.io/hostname: ip-192-168-65-136.ap-northeast-2.compute.internal
+      tolerations:
+        - key: "bookinfo"
+          operator: "Equal"
+          value: "only"
+          effect: "NoSchedule"
 ---
