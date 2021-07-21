@@ -8,6 +8,6 @@ fi
 
 linkerd install | kubectl apply -f -
 
-sleep 10
+#sleep 10
 
-linkerd check
+#linkerd check
