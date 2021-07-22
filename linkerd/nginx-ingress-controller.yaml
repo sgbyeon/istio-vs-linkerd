@@ -275,7 +275,7 @@ metadata:
   namespace: ingress-nginx
 spec:
   externalIPs:
-  - 13.125.125.234
+  - 52.79.78.230
   type: NodePort
   ports:
     - name: http

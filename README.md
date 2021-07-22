@@ -5,6 +5,7 @@ testbed
   * m5.large x 3
 - istio 1.10.3
 - linkerd 2.10.2 with nginx-ingress
+- NodePort only
 
 load generator
 ==============
@@ -17,4 +18,5 @@ test applications
 
 test specifications
 ===================
-- 100 users/sec
+- "Number of users to simulate" = 100 users
+- "Spawn rate" (user spawned / second) = 10
