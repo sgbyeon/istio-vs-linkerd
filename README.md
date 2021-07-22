@@ -1,11 +1,14 @@
 testbed
 =======
-- EKS: 1.19
-- NodeGroup: m5.large x 3
+- EKS 1.19
+- NodeGroup
+  * m5.large x 3
+- istio 1.10.3
+- linkerd 2.10.2 with nginx-ingress
 
 load generator
 ==============
-- locust
+- locust-1.6.0
 
 test applications
 =================
@@ -14,4 +17,4 @@ test applications
 
 test specifications
 ===================
-- 10 users/sec
+- 100 users/sec
